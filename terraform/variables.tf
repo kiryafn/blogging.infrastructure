@@ -20,3 +20,9 @@ variable "aws_secret_key" {
   type        = string
   sensitive   = true
 }
+
+variable "ses_verified_emails" {
+  description = "List of email addresses to verify in SES (you'll need to verify them in AWS console after terraform apply)"
+  type        = list(string)
+  default     = []
+}
